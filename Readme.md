@@ -16,16 +16,9 @@
 8. Формирование JSON файла приключения.
 
 ## Как использовать
-### Подготовка
-- Скачайте и установите последнюю версию Python с официального сайта python.org. Во время установки отметьте опцию "Add Python to PATH".
 
-### Установка необходимых библиотек
-Откройте командную строку и установите следующие библиотеки через pip:
-```sh
-pip install deepl
-```
-### Скачайте папку с исходниками
-Из ветки releases скачайте папку с исходными кодами. Распакуйте в любое удобное место
+### Скачайте архив DeepLAdvTranslate.rar
+ИРаспакуйте в любое удобное место
 https://github.com/Shadowheg/Adventure_auto_translate/releases
 
 ### Получение API ключа для DeepL
@@ -34,29 +27,23 @@ https://github.com/Shadowheg/Adventure_auto_translate/releases
 
 ### Настройка и запуск скрипта
 1. В рабочей папке сохраните нужный глоссарий. В `config.json` укажите имя глоссария в `DeepL_glossary_name`.
-2. Зарегистрируйте глоссарий в DeepL с помощью `CreateDeepL_Glossary`. Это заполнит поле `glossary_id`.
-```sh
-py CreateDeepL_glossary.py
-```
-
+2. Зарегистрируйте глоссарий в DeepL с помощью `CreateDeepL_Glossary.bat`. +Это заполнит поле `glossary_id`.
 3. Укажите путь к JSON файлу приключения, который вы хотите перевести, обычно лучше хранить его в папке `originals`.
-4. Запустите скрипт `DeepLAdvTranslate`, выполните:
-```sh
-py DeepLAdvTranslate.py
-```
+4. Запустите скрипт `DeepLAdvTranslate.bat`.
+
 
 ## Поддерживаемые языки/supported language
-- DE (Немецкий)
-- EN (Английский)
-- ES (Испанский)
-- FR (Французский)
-- IT (Итальянский)
-- JA (Японский)
-- NL (Голландский)
-- PL (Польский)
-- PT (Португальский)
-- RU (Русский)
-- ZH (Китайский)
+- DE (Немецкий/ German)
+- EN (Английский/English)
+- ES (Испанский/Spanish)
+- FR (Французский/French)
+- IT (Итальянский/Italian)
+- JA (Японский/Japanese)
+- NL (Голландский/Dutch)
+- PL (Польский/Polish)
+- PT (Португальский/Portuguese)
+- RU (Русский/Russian)
+- ZH (Китайский/Chinese)
 
 # Adventure Autotranslation Module for Foundry
 This module provides auto-translation of adventure content for Foundry VTT via the DeepL API. Version 0.5 beta.
@@ -76,24 +63,16 @@ This module provides auto-translation of adventure content for Foundry VTT via t
 8. Forming the JSON file of the adventure.
 
 ##How to use
-### Preparation
-- Download and install the latest version of Python from the official website python.org. During installation, tick the "Add Python to PATH" option.
-
-### Install the required libraries
-Open a command prompt and install the following libraries via pip:
-```sh
-pip install deepl
-```
+### Download the archive DeepLAdvTranslate.rar
+And unzip it to any convenient place.
+https://github.com/Shadowheg/Adventure_auto_translate/releases
 
 ### Obtain API key for DeepL
-1. Register at DeepL and get an API key.
+1. Register at DeepL and get API key.
 2. In the config.json file, replace the api_key value with your personal API key from DeepL.
 
 ### Set up and run the script
 1. In the working folder, save the required glossary. In `config.json`, specify the glossary name in `DeepL_glossary_name`.
-2. Register the glossary in DeepL using `CreateDeepL_Glossary`. This will populate the `glossary_id` field.
+2. Register the glossary in DeepL using `CreateDeepL_Glossary.bat`. This will populate the `glossary_id` field.
 3. Specify the path to the JSON file of the adventure you want to translate, it is usually best to store it in the `originals` folder.
-4. Run the `DeepLAdvTranslate` script, execute:
-```sh
-py <script_name>.py
-```
+4. Run the `DeepLAdvTranslate.bat` script.
