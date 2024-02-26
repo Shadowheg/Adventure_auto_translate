@@ -1,0 +1,10 @@
+{
+    "api_key": "<введите ваш deepl api-key>",
+    "file_path": "originals/<имя json файла для перевода",
+    "translations_cache_file": "work/translations_cache.json",
+    "csv_glossary_path" : "Glossary.csv",
+    "DeepL_glossary_name" : "<имя глоссария>", 
+    "glossary_id": "<ID глоссария, получаете после регистрации глоссария>",
+    "source_lang" : "en" ,
+    "target_lang" : "ru"  
+  }
