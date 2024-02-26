@@ -21,7 +21,9 @@
 
 ### Установка необходимых библиотек
 Откройте командную строку и установите следующие библиотеки через pip:
+```sh
 pip install deepl
+```
 
 ### Получение API ключа для DeepL
 1. Зарегистрируйтесь на сайте DeepL и получите API ключ.
@@ -72,7 +74,9 @@ This module provides auto-translation of adventure content for Foundry VTT via t
 
 ### Install the required libraries
 Open a command prompt and install the following libraries via pip:
+```sh
 pip install deepl
+```
 
 ### Obtain API key for DeepL
 1. Register at DeepL and get an API key.
