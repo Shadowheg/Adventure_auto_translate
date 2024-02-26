@@ -77,7 +77,9 @@ def estimate_translation_cost(translation_snippets):
     for text in translation_snippets.values():
         if text is not None:
             total_length += len(text)
-    return tarif * total_length
+    cost = tarif * total_length
+    return total_length, cost  # Возвращаем количество символов и стоимость перевода
+
 
 def extract_and_preserve(text):
     # Паттерн для поиска специального синтаксиса и отдельного захвата визуальной части в фигурных скобках
@@ -219,17 +221,34 @@ def extracty_snippets(file_path):
 def do_translation(translation_snippets):
     # Перевод извлеченных данных и сохранение переведенных данных
     translated_snippets = {}
+    total_snippets = len(translation_snippets)
+    translated_count = 0
+    last_reported_progress = -5  # Начальное значение, чтобы первый отчет был сразу после старта
+
     for key, text in translation_snippets.items():
-        translated_text = translate_text_with_deepl(text, glossary_id)
-        if translated_text is not None:  # Добавляем эту проверку
-            # Очистка переведенного текста от тегов <span class="notranslate">
+        translated_text = translate_text_with_deepl(text, glossary_id, target_lang)
+        if translated_text is not None:
             cleaned_text = clean_translated_text(translated_text)
             translated_snippets[key] = cleaned_text
+            translations_cache_modified = True
+
+        translated_count += 1
+        progress_percentage = (translated_count / total_snippets) * 100
+        
+        # Проверяем, увеличился ли прогресс на 5% с момента последнего отчета
+        if progress_percentage >= last_reported_progress + 5:
+            print(f"\rПрогресс перевода: {progress_percentage:.2f}% ({translated_count}/{total_snippets})", end="")
+            last_reported_progress = progress_percentage
+
+    print("\nПеревод завершен.")  # Завершающее сообщение с переходом на новую строку для чистоты вывода
+    
+    # Сохранение результатов перевода
     with open(translated_json_file_path, 'w', newline='', encoding='utf-8') as translated_json_file:
         json.dump(translated_snippets, translated_json_file, ensure_ascii=False, indent=4)
 
     print(f"Извлеченные данные сохранены в файл: {extracted_json_file_path}")
     print(f"Переведенные данные сохранены в файл: {translated_json_file_path}")
+
 
 
 
@@ -264,8 +283,8 @@ def clean_translated_text(text):
 
 # Первая часть: Извлечение и перевод
 translation_snippets = extracty_snippets(file_path)
-translation_cost = estimate_translation_cost(translation_snippets)
-print(f'Перевод будет стоить примерно: ${format(translation_cost, ".2f")}')
+total_length, translation_cost = estimate_translation_cost(translation_snippets)
+print(f'Общее количество символов для перевода: {total_length}, перевод будет стоить примерно: ${format(translation_cost, ".2f")}')
 shoult_do_translation = input("Делаем перевод? Y/N: ").strip().upper()
 if shoult_do_translation == "Y":
     do_translation(translation_snippets)
