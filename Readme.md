@@ -52,7 +52,7 @@ python имя_вашего_скрипта.py
 4) Запускаем код DeepLAdvTranslate
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Поддерживаемые языки/supported languages:
 DE (German)
 EN (English)
 ES (Spanish)
@@ -64,7 +64,8 @@ PL (Polish)
 PT (Portuguese)
 RU (Russian)
 ZH (Chinese)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Autotranslation module of adventures for Foundry. Translation is done via DeepL. Version 0.5 beta
 
 What does it do: Translates logs (content, page names, log names) scene names, monster abils, actor names via DeepL in accordance with the glossary.
