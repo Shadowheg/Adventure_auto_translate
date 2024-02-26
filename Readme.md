@@ -87,6 +87,6 @@ pip install deepl
 2. Register the glossary in DeepL using `CreateDeepL_Glossary`. This will populate the `glossary_id` field.
 3. Specify the path to the JSON file of the adventure you want to translate, it is usually best to store it in the `originals` folder.
 4. Run the `DeepLAdvTranslate` script, execute:
-``sh
+```sh
 py <script_name>.py
 ```
