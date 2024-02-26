@@ -55,6 +55,10 @@ RU (Russian)
 ZH (Chinese)
 
 
+----------------------------------------------------------------------------------------------
+
+
+
 Autotranslation module of adventures for Foundry. Translation is done via DeepL.
 Version 0.5 beta
 
