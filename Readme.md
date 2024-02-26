@@ -24,6 +24,9 @@
 ```sh
 pip install deepl
 ```
+### Скачайте папку с исходниками
+Из ветки releases скачайте папку с исходными кодами. Распакуйте в любое удобное место
+https://github.com/Shadowheg/Adventure_auto_translate/releases
 
 ### Получение API ключа для DeepL
 1. Зарегистрируйтесь на сайте DeepL и получите API ключ.
