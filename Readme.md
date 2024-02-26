@@ -1,5 +1,5 @@
 # Модуль автоперевода приключений для Foundry
-Этот модуль обеспечивает автоперевод контента приключений для Foundry VTT через API DeepL. Версия 0.5 beta.
+Этот модуль обеспечивает автоперевод контента приключений для Foundry VTT через API DeepL. Версия 0.6 beta.
 
 ## Особенности
 - Переводит журналы (контент, заголовки страниц, названия журналов), названия сцен, способности монстров и имена актёров.
@@ -29,6 +29,7 @@ https://github.com/Shadowheg/Adventure_auto_translate/releases
 1. В рабочей папке сохраните нужный глоссарий. В `config.json` укажите имя глоссария в `DeepL_glossary_name`.
 2. Зарегистрируйте глоссарий в DeepL с помощью `CreateDeepL_Glossary.bat`. +Это заполнит поле `glossary_id`.
 3. Укажите путь к JSON файлу приключения, который вы хотите перевести, обычно лучше хранить его в папке `originals`.
+ВНИМАНИЕ:необходимо указывать JSON файл для FOUNDRY типа adventure. Там требуется именно эта разметка.
 4. Запустите скрипт `DeepLAdvTranslate.bat`.
 
 
@@ -75,4 +76,5 @@ https://github.com/Shadowheg/Adventure_auto_translate/releases
 1. In the working folder, save the required glossary. In `config.json`, specify the glossary name in `DeepL_glossary_name`.
 2. Register the glossary in DeepL using `CreateDeepL_Glossary.bat`. This will populate the `glossary_id` field.
 3. Specify the path to the JSON file of the adventure you want to translate, it is usually best to store it in the `originals` folder.
+ATTENTION:you need to specify JSON file for FOUNDRY of adventure type. This markup is required there.
 4. Run the `DeepLAdvTranslate.bat` script.
