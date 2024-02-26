@@ -35,10 +35,14 @@ https://github.com/Shadowheg/Adventure_auto_translate/releases
 ### Настройка и запуск скрипта
 1. В рабочей папке сохраните нужный глоссарий. В `config.json` укажите имя глоссария в `DeepL_glossary_name`.
 2. Зарегистрируйте глоссарий в DeepL с помощью `CreateDeepL_Glossary`. Это заполнит поле `glossary_id`.
+```sh
+py CreateDeepL_glossary.py
+```
+
 3. Укажите путь к JSON файлу приключения, который вы хотите перевести, обычно лучше хранить его в папке `originals`.
 4. Запустите скрипт `DeepLAdvTranslate`, выполните:
 ```sh
-py <имя_скрипта>.py
+py DeepLAdvTranslate.py
 ```
 
 ## Поддерживаемые языки/supported language
