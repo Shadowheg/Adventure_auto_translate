@@ -18,35 +18,24 @@ Version 0.5 beta
 
 Скачайте и установите последнюю версию Python с официального сайта python.org.
 Во время установки обязательно отметьте опцию "Add Python to PATH", чтобы использовать Python из командной строки.
+
 Установка необходимых библиотек:
-
 Откройте командную строку (CMD или PowerShell) и установите следующие библиотеки с помощью пакетного менеджера pip:
-Copy code
-pip install deepl hashlib
-Указанная команда установит библиотеку для работы с API DeepL (deepl) и встроенную библиотеку для работы с хешированием (hashlib уже включена в стандартную библиотеку Python, поэтому её устанавливать не нужно).
-Получение API ключа для DeepL:
+pip install deepl 
+Указанная команда установит библиотеку для работы с API DeepL (deepl) 
 
+Получение API ключа для DeepL:
 Зарегистрируйтесь на сайте DeepL и получите API ключ. Инструкции по получению ключа доступны в документации DeepL.
 
-Подготовка рабочей среды:
-
-Создайте на компьютере папку, куда будете сохранять свой скрипт и необходимые файлы (например, MyProject).
-Сохраните ваш скрипт в эту папку.
-Создайте внутри папки MyProject дополнительные папки work, result, и originals, как указано в скрипте.
 Настройка скрипта:
-
-Откройте config.json в текстовом редакторе и замените значение переменной api_key на ваш личный API ключ от DeepL.
-Убедитесь, что пути к файлам в скрипте соответствуют вашей структуре папок.
+Откройте config.json в текстовом редакторе и замените значение переменных, api_key на ваш личный API ключ от DeepL.
 
 Запуск скрипта:
-
 Откройте командную строку в папке с вашим проектом и выполните команду:
-Copy code
-python имя_вашего_скрипта.py
-Следуйте инструкциям в скрипте для выполнения перевода.
+py
 
 Порядок запуска:
-1) Сначала в рабочей папке сохраняем нужный нам глоссарий. Пишем в поле "DeepL_glossary_name" В файле config.json желаемое имя глоссарий в DeepL
+1) Сначала в рабочей папке сохраняем нужный нам глоссарий. Пишем в поле "DeepL_glossary_name" В файле config.json желаемое имя глоссарий в DeepL и имя в папке.
 2) Регистрируем его в DeepL используя код CreateDeepL_Glossary. Это заполнит поле glossary id.
 3) Заполяем путь до желаемого к переводу JSON файла приключения из foundry. Обычно лучше хранить в originals.
 4) Запускаем код DeepLAdvTranslate
@@ -66,33 +55,44 @@ RU (Russian)
 ZH (Chinese)
 
 
-Autotranslation module of adventures for Foundry. Translation is done via DeepL. Version 0.5 beta
+Autotranslation module of adventures for Foundry. Translation is done via DeepL.
+Version 0.5 beta
 
-What does it do: Translates logs (content, page names, log names) scene names, monster abils, actor names via DeepL in accordance with the glossary.
+What it does:
+Translates logs (content, page titles, log titles) scene titles, monster abilites, actor names via DeepL in accordance with the glossary.
 
-Algorithm of work: -Program reads JSON file, -extracts from it in the format of lines for translation, -posts from it to the files work/<name JSON>_extracted.json -first stop step. Do we do the translation? -Checks if there is a translation of the given strings in the translation buffer. -If there is a translation in the buffer, the translation is taken from there, translates the missing ones from DEEPL filling the buffer file with new data -Second stop step. Whether we form JSON file of adventure with translation. -Forming a JSON file of the adventure and
+Algorithm of work:
+-Program reads JSON file, 
+-extracts from it in the format of lines for translation, 
+-deposits them into the files work/<JSON name>_extracted.json
+-first stop step. Do we do the translation?
+-Checks if there is a translation of the given strings in the translation buffer. 
+-If there is translation in the buffer - translation is taken from there, translates missing ones from DEEPL filling the buffer file with new data.
+-Second stop step. Whether we form JSON file of adventure with translation.
+-Forming a JSON file of the adventure and
 
 How to use:
 
-Download and install the latest version of Python from the official python.org website. During installation, be sure to tick the "Add Python to PATH" option to use Python from the command line. Install the required libraries:
+Download and install the latest version of Python from the official python.org website.
+During installation, be sure to tick the "Add Python to PATH" option to use Python from the command line.
 
-Open a command line (CMD or PowerShell) and install the following libraries using the pip package manager: Copy code pip install deepl hashlib The above command will install the DeepL API key library (deepl) and the built-in hashing library (hashlib is already included in the Python standard library, so you don't need to install it). Obtain an API key for DeepL:
+Install the required libraries:
+Open a command prompt (CMD or PowerShell) and install the following libraries using the pip package manager:
+pip install deepl 
+The above command will install the library to work with the API DeepL (deepl) 
 
-Register at DeepL to get an API key. Instructions for obtaining the key are available in the documentation at DeepL.
+Obtain an API key for DeepL:
+Register at DeepL and get an API key. Instructions for obtaining the key are available in the documentation at DeepL.
 
-Preparing a working environment:
-
-Create a folder on your computer where you will save your script and necessary files (e.g. MyProject). Save your script to this folder. Create additional work, result, and originals folders inside the MyProject folder as specified in the script. Configuring the script:
-
-Open config.json in a text editor and replace the value of the api_key variable with your personal API key from DeepL. Make sure the file paths in the script match your folder structure.
+Configuring the script:
+Open config.json in a text editor and replace the value of the variables, api_key with your personal API key from DeepL.
 
 Running the script:
+Open a command prompt in your project folder and run the command:
+py
 
-Open a command prompt in your project folder and run the command: Copy code python name_your_script.py Follow the instructions in the script to perform the translation.
-
-Startup order:
-
-First, in the working folder, save the glossary we need. We write in the field "DeepL_glossary_name" in the config.json file the desired name of the glossary in DeepL.
-Register it in DeepL using the code CreateDeepL_Glossary. This will populate the glossary id field.
-Fill in the path to the desired JSON file to translate the adventure from foundry. Usually it is better to store it in originals.
-Run the DeepLAdvTranslate code
+Launch order:
+1) First, save the glossary we need in the working folder. We write in the field "DeepL_glossary_name" in the config.json file the desired name of the glossary in DeepL and the name in the folder.
+2) Register it in DeepL using the CreateDeepL_Glossary code. This will populate the glossary id field.
+3) Fill in the path to the desired JSON file of the adventure from foundry. Usually it is better to store it in originals.
+4) Run the DeepLAdvTranslate code
