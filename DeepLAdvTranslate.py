@@ -1,6 +1,5 @@
 import os
 import json
-import csv
 import re
 import deepl
 import hashlib
@@ -84,7 +83,7 @@ def estimate_translation_cost(translation_snippets):
 def extract_and_preserve(text):
     # Паттерн для поиска специального синтаксиса и отдельного захвата визуальной части в фигурных скобках
     pattern = re.compile(
-        r'(@\w+\[[^\]]+\])(\{[^}]+\})?'
+        r'(@\w+\[.*?])(\{[^}]+\})?'
     )
     parts = []
     last_end = 0
@@ -248,8 +247,6 @@ def do_translation(translation_snippets):
 
     print(f"Извлеченные данные сохранены в файл: {extracted_json_file_path}")
     print(f"Переведенные данные сохранены в файл: {translated_json_file_path}")
-
-
 
 
 def do_json_generation():

@@ -2,4 +2,5 @@ build/
 dist/
 config.json
 *.spec
-.gitignore
+*.gitignore
+*.vs
