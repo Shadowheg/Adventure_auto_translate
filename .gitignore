@@ -1,6 +1,10 @@
 build/
 dist/
+_internal/
 config.json
 *.spec
 *.gitignore
 *.vs
+*.bat
+*.cmd
+*.exe
