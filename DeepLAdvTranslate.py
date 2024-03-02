@@ -116,6 +116,15 @@ def extract_adventure_translation_snippets(adventure_data):
         actor_id = actor.get('_id', 'No ID')
         actor_name = extract_and_preserve(actor.get('name', ''))
         data[f'actor_{actor_id}_name'] = actor_name
+
+        # описание и перевод hazzard`ов
+        system_details = actor.get('system', {}).get('details', {})
+        for detail_key in ['disable', 'description', 'reset']:
+            if detail_key in system_details:
+                detail_value = extract_and_preserve(system_details[detail_key])
+                data[f'actor_{actor_id}_details_{detail_key}'] = detail_value
+
+
         for item in actor.get('items', []):
             if item.get('type', '') == 'action':
                 item_id = item.get('_id', 'No ID')
@@ -124,6 +133,10 @@ def extract_adventure_translation_snippets(adventure_data):
                 data[f'actor_{actor_id}_items_{item_id}_name'] = item_name
                 data[f'actor_{actor_id}_items_{item_id}_description'] = item_description
             
+
+
+
+
     # Выдираем журналы
     for journal in adventure_data['journal']:
         journal_id = journal.get('_id', 'No ID')
@@ -169,6 +182,15 @@ def translate_and_update_adventure_data(adventure_data, translated_snippets):
         actor_id = actor.get('_id', 'No ID')
         if 'name' in actor:
             actor['name'] = translated_snippets.get(f'actor_{actor_id}_name', actor['name'])
+        
+        # Обновляем детали актёра, если они есть
+        system_details = actor.get('system', {}).get('details', {})
+        for detail_key in ['disable', 'description', 'reset']:
+            detail_key_full = f'actor_{actor_id}_details_{detail_key}'
+            if detail_key_full in translated_snippets:
+                system_details[detail_key] = translated_snippets[detail_key_full]
+        
+        
         # Описания действий персонажей
         for item in actor.get('items', []):
             if 'action' != item.get('type', None):
