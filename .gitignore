@@ -8,3 +8,6 @@ config.json
 *.bat
 *.cmd
 *.exe
+CreateDeepL_glossary.build/
+CreateDeepL_glossary.dist/
+py311/
