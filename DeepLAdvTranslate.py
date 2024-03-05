@@ -185,6 +185,20 @@ class TranslationManager:
             # Обновление имени сцены, если доступен перевод
             if scene_name_key in translated_snippets:
                 scene['name'] = translated_snippets[scene_name_key]
+            
+            # Обновление имен токенов в сцене, если доступен перевод
+            for token in scene.get('tokens', []):
+                token_id = token.get('_id', '')
+                token_name_key = f'scene_{scene_id}_tokens_{token_id}_name'
+                if token_name_key in translated_snippets:
+                    token['name'] = translated_snippets[token_name_key]
+
+            # Обновление текстов заметок в сцене, если доступен перевод
+            for note in scene.get('notes', []):
+                note_id = note.get('_id', '')
+                note_text_key = f'scene_{scene_id}_notes_{note_id}_text'
+                if note_text_key in translated_snippets:
+                    note['text'] = translated_snippets[note_text_key]
 
     def do_json_generation(self):
         # Check for the existence of the translated file
@@ -289,6 +303,20 @@ class TranslationManager:
             scene_id = scene.get('_id', 'No ID')
             scene_name = self.extract_and_preserve(scene.get('name', ''))
             data[f'scene_{scene_id}_name'] = scene_name
+
+            # Извлечение имен токенов в сценах
+            for token in scene.get('tokens', []):
+                token_id = token.get('_id', '')
+                token_name = token.get('name', '')
+                if token_name:
+                    data[f'scene_{scene_id}_tokens_{token_id}_name'] = self.extract_and_preserve(token_name)
+
+            # Извлечение заметок в сценах
+            for note in scene.get('notes', []):
+                note_id = note.get('_id', '')
+                note_text = note.get('text', '')
+                if note_text:
+                    data[f'scene_{scene_id}_notes_{note_id}_text'] = self.extract_and_preserve(note_text)
 
 
         # Извлечение имен папок
