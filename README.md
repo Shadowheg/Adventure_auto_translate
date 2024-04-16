@@ -1,4 +1,4 @@
-# Модуль переводов автоматических переводов JSON файлов
+# Модуль автоматических переводов JSON файлов
 
 [![en](https://img.shields.io/badge/lang-en-yellow.svg)](README.en.md)
 
