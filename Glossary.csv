@@ -233,7 +233,7 @@ Cover Tracks,Заметать Следы
 CP,ММ
 Craft,Создание
 Craft Anything,Создание чего угодно
-Crafter's Appraisal,Оценка ремесленником
+Crafter Appraisal,Оценка ремесленником
 Crafting,Ремесло
 Crawl,Ползти
 Create a Diversion,Отвлечь Внимание
@@ -370,7 +370,7 @@ Expert,Эксперт
 Expert Spellcasting Benefits,Преимущества Экспертного Колдовства
 Exploration,Исследование
 Exploration and Downtime Activities,Активности во время исследования и отдыха
-Explorer's Clothing,Одежда исследователя
+Explorer Clothing,Одежда исследователя
 Express Rider,Скоростной наездник
 Extradimensional,Межпространственный
 Eye for Numbers,Человек дождя
@@ -711,7 +711,7 @@ Pick a Lock,Вскрытие Замка
 Pick up the Pace,Подхватывать ритм
 Pickpocket,Карманник
 Piercing,Колющий
-Pilgrim's Token,Символ паломника
+Pilgrim Token,Символ паломника
 Planar Scion,Планарный Отпрыск
 Planar Survival,Планарное выживание
 Plane,План
@@ -864,7 +864,7 @@ Single Action,Одиночное действие
 Size,Размер
 Skeleton,Скелет
 Skelm,Скельм
-Skeptic's Defense,Защита скептика
+Skeptic Defense,Защита скептика
 Skill,Навык
 Skill Feats,Способности навыков
 Skill Increases,Увеличения навыков
@@ -1152,7 +1152,7 @@ Demed,Демед
 Eleder,Эледер
 Vidrian,Видриан
 Desperation Bay,Залив Отчаяния
-Smuggler’s Shiv,Остров Контрабандистов
+Smuggler Shiv,Остров Контрабандистов
 Broad Captain Inn,Таверна Широкого Капитана
 Linesnapper,Лайнснэппер
 Charmed Crab,Очарованная Краб
@@ -1255,15 +1255,15 @@ Primordial Envy,Первородная Зависть
 Sinsludges,Грехошламы
 Kindred Crossing,Путь Родства
 Iron Harbor,Железная Гавань
-Fisher’s Point,Рыбацкий Пункт
+Fisher Point,Рыбацкий Пункт
 Thunderhead Isle,Остров Громовой Головы
 Stonehome,Каменный Дом
-Gold’s Ruin,Руины Золота
+Gold Ruin,Руины Золота
 The Swordfish,Меч-Рыба
 Rusthenge,Растхендж
 Theiltemar,Тейлтемар
 boggards,Боггарды
-Theiltemar’s crafters,Ремесленники Тейлтемара
+Theiltemar crafters,Ремесленники Тейлтемара
 Black Lake boggards,Боггарды Чёрного Озера
 Dispater,Диспатер
 Belimarius,Белимариус
@@ -1286,8 +1286,8 @@ Smithy,Кузница
 Secret Lab,Секретная Лаборатория
 Temple of Xar-Azmak,Храм Ксар-Азмак
 Grand Gallery,Грандиозная Галерея
-Meitremar’s Quarters,Жилище Мейтремара
-Despoiler’s Deep,Глубины Опустошителя
+Meitremar Quarters,Жилище Мейтремара
+Despoiler Deep,Глубины Опустошителя
 Darklands Landing,Предверие Тёмных Земель
 Watchpost,Наблюдательный Пост
 Dero Encampment,Лагерь Деро
@@ -1296,7 +1296,7 @@ Bolgus,Болгус
 Durgon,Дургон
 Larva,Личинка
 Worship Chamber,Комната Поклонения
-Boggards' Home,Дом Боггардов
+Boggards Home,Дом Боггардов
 Alternate Domains,Альтернативные домены
 Divine Intercession,Божественное вмешательство
 Favored Weapon,Предпочитаемое оружие
@@ -1384,7 +1384,7 @@ Demon Lords,Повелители демонов
 Abraxas,Абраксас
 Angazhan,Ангажан
 Baphomet,Бафомет
-Cyth-V'sug,Сит-Ви'заг
+Cyth-Vug,Сит-Ви-заг
 Dagon,Дагон
 Gogunta,Гогунта
 Kabriri,Кабрири
@@ -1456,7 +1456,6 @@ Otolmens,Отолмэнс
 Saloc,Салок
 Valmallos,Вальмаллос
 Ydajisk,Идаджиск
-Outer Gods & Great Old Ones,Внешние Боги и Великие Древние
 Azathoth,Азатот
 Hastur,Хастур
 Nhimbaloth,Нимбалот
@@ -1502,7 +1501,7 @@ Bes,Бэс
 Hathor,Хатхор
 Horus,Гор
 Isis,Изида
-Ma'at,Маат
+Maat,Маат
 Osiris,Осирис
 Ra,Ра
 Sekhmet,Сехмет
@@ -1624,7 +1623,7 @@ Kris,Крис
 Panabas,Панабас
 Talwar,Тальвар
 Elven Curve Blade,Эльфийская сабля
-Filcher's Fork,Вилка жулика
+Filcher Fork,Вилка жулика
 Gnome Hooked Hammer,Гномий чекан
 Dogslicer,Собачий тесак
 Horsechopper,Лошадиный тесак
@@ -1759,7 +1758,7 @@ Explosive Dogslicer,Взрывной собачий тесак
 Alchemical Gear,Алхимическое снаряжение
 Alchemical Bombs,Алхимические бомбы
 Lesser Acid Flask,Малая кислотная склянка
-Lesser Alchemist's Fire,Малый алхимический огонь
+Lesser Alchemist Fire,Малый алхимический огонь
 Lesser Bottled Lightning,Малая молния в бутылке
 Lesser Frost Vial,Малая морозная склянка
 Lesser Tanglefoot Bag,Малая бомба-липучка
@@ -1791,7 +1790,7 @@ Animals,Животные
 Barding,Бардинг
 Ancestry and Background,Родословная и предыстория
 Initial Skills,Начальные умения
-Fighter's Ability,Способность воина
+Fighter Ability,Способность воина
 Bravery,Храбрость
 General Ability,Общая способность
 Skill Increase,Увеличение навыка
@@ -1843,7 +1842,7 @@ Advanced Weapon Training,Тренировка с продвинутым оруж
 Advantageous Assault,Выгодное нападение
 Disarming Stance,Разоружающая стойка
 Furious Focus,Яростное сосредоточение
-Guardian's Deflection,Отражение защитника
+Guardian Deflection,Отражение защитника
 Reflexive Shield,Отражающий щит
 Revealing Stab,Раскрывающий удар
 Shatter Defenses,Поколебать защиту
@@ -1880,7 +1879,7 @@ Flinging Shove,Швыряющее Отталкивание
 Improved Dueling Riposte,Улучшенная Дуэльная Контратака
 Incredible Ricochet,Невероятный Рикошет
 Lunging Stance,Удлиняющая Стойка
-Paragon's Guard,Образцовый Страж
+Paragon Guard,Образцовый Страж
 Spring Attack,Атака С Отскока
 Desperate Finisher,Отчаянный Сокрушающий Удар
 Determination,Целеустремленность
@@ -2036,9 +2035,9 @@ Barreling Charge,Нестись В Атаку
 Animal Skin,Шкура Животного
 Brutal Bully,Жестокий Задира
 Cleave,Рассечение
-Dragon's Rage Breath,Яростное Дыхание Дракона
-Giant's Stature,Рост Гиганта
-Spirits' Interference,Вмешательство Духов
+Dragon Rage Breath,Яростное Дыхание Дракона
+Giant Stature,Рост Гиганта
+Spirits Interference,Вмешательство Духов
 Mage Hunter,Охотник На Магов
 Inner Strength,Внутренняя Сила
 Nocturnal Sense,Ночное Чувство
@@ -2062,16 +2061,16 @@ Impressive Landing,Впечатляющее Приземление
 Resounding Blow,Оглушительный Удар
 Silencing Strike,Глушащий Удар
 Tangle of Battle,Неразбериха Битвы
-Dragon's Rage Wings,Крылья Драконьей Ярости
+Dragon Rage Wings,Крылья Драконьей Ярости
 Furious Grab,Яростный Захват
-Predator's Pounce,Нападение Хищника
-Spirit's Wrath,Гнев Духа
-Titan's Stature,Рост Титана
+Predator Pounce,Нападение Хищника
+Spirit Wrath,Гнев Духа
+Titan Stature,Рост Титана
 Embrace the Pain,Приятие Боли
 Sunder Spell,Расщепление Заклинания
 Unbalancing Sweep,Выводящий Из Равновесия Размах
 Awesome Blow,Потрясный Удар
-Giant's Lunge,Выпад Гиганта
+Giant Lunge,Выпад Гиганта
 Vengeful Strike,Мстительный Удар
 Impaling Thrust,Пробивающий Снаряд
 Sunder Enchantment,Расщепление Зачарования
@@ -2372,7 +2371,6 @@ LE,Принцип_Зло
 LN,Принцип_Нейтрал
 N,Нейтрал
 NE,Нейтрал_Зло
-N_G,Нейтрал_Добро
 All-Around Vision,Круговое зрение
 Aquatic Ambush,Водная засада
 At-Will Spells,Заклинания по желанию
@@ -2594,9 +2592,9 @@ F30,Е30
 River Kingdoms,Речные Королевства
 Shimmerford,Шиммерфорд
 Tymon,Таймон​​
-Smine's Weaponworks,Оружейная Мастерская Смайна
+Smine Weaponworks,Оружейная Мастерская Смайна
 Venture-Captain Holgarin Smine,Капитан-Куратор Холгарин Смайн
-Hart's Brewery,Пивоварня Харты
+Hart Brewery,Пивоварня Харты
 Rosa Hart,Роза Харт
 Mordha Lyons,Мордха Лайонс​​
 The Tanner,Кожевник​​
@@ -2609,7 +2607,7 @@ Holgarin,Холгарин
 Lyons,Лайонс​​
 Smine,Смайн
 Mosquito Witch,Москитная Ведьма​​
-Bloodseekers (Stirges),Кровожады (Стерджи)
+Bloodseekers,Кровоискатели
 Mitflit,Митфлит
 Mosquito Witch Doll,Кукла Москитной Ведьмы
 Witchbread,Ведьмин Хлеб
@@ -3062,7 +3060,7 @@ Terwa Star Reader,Чтец Звезд Тервы
 Merfolk Warrior,Мерфолк-Воин
 Merfolk Wavecaller,Мерфолк Призыватель Волн
 Veshumirix,Вешумирикс
-Mengkare,Менгкаре
+Mengkare,Менгкарэ
 Moschabbatt,Мошаббат
 Morta Valaskin,Морта Валаскин
 Kellen Carondil,Келлен Карондил
@@ -3072,7 +3070,7 @@ Ilssrah Embermead,Ильссра Эмбермид
 Deadmouth,Мертвый Рот
 Dalos,Дало
 Deculi,Декули
-Droskar’s Crag,Утес Дроскара
+Droskar Crag,Утес Дроскара
 Kovlar,Ковлар
 Haunted City,Город-Призрак
 Darklands,Тёмные Земли
@@ -3298,7 +3296,7 @@ Cloaker,Плащевик
 Cockatrice,Кокатрикс
 Draugr,Драугр
 Dullahan,Дуллахан
-D'ziriak,Дзириак
+Dziriak,Дзириак
 Ether Spider,Эфирный Паук
 Ettin,Эттин
 Faerie Dragon,Волшебный Дракончик
@@ -3334,7 +3332,7 @@ Unicorn,Единорог
 Vampiric Mist,Вампирский Туман
 Web Lurker,Паутинщик
 Wendigo,Вендиго
-Will-o'-Wisp,Блуждающий Огонек
+Will-o-Wisp,Блуждающий Огонек
 Yeti,Йети
 Shining Ammunition,Светящаяся Амуниция
 Lesser Blight Bomb,Малая Гнилостная Бомба
@@ -3353,15 +3351,15 @@ Lesser Water Bomb,Малая Водная Бомба
 Bioluminescence Bomb,Биолюминесцентная Бомба
 Runestone,Рунный Камень
 Lesser Bestial Mutagen,Малый Животный Мутаген
-Lesser Cheetah's Elixir,Малый Эликсир Гепарда
+Lesser Cheetah Elixir,Малый Эликсир Гепарда
 Lesser Cognitive Mutagen,Малый Умственный Мутаген
 Lesser Eagle-Eye Elixir,Малый Эликсир Орлиного Глаза
 Lesser Juggernaut Mutagen,Малый Мутаген Джагернаут
-Lesser Leaper's Elixir,Малый Эликсир Прыгуна
+Lesser Leaper Elixir,Малый Эликсир Прыгуна
 Lesser Quicksilver Mutagen,Малый Ртутный Мутаген
 Lesser Serene Mutagen,Малый Мутаген Безмятежности
 Lesser Silvertongue Mutagen,Малый Мутаген Красноречия
-Lesser Skeptic's Elixir,Малый Эликсир Скептика
+Lesser Skeptic Elixir,Малый Эликсир Скептика
 Lesser Drakeheart Mutagen,Малый Мутаген Сердца Дрейка
 Lastwall Soup,Ластвольский Суп
 Lesser Energy Mutagen,Малый Энергетический Мутаген
@@ -3404,9 +3402,7 @@ Blindpepper Tube,Туба Слепящего Перца
 Scrollstaff,Свитковый Посох
 Everburning Torch,Вечный Факел
 Predictable Silver Piece,Предсказуемая Серебряная Монета
-Cantrip Deck (5-Pack),Колода Чар (5 Карт)
-Cantrip Deck (Full Pack),Колода Чар (Полная Пачка)
-Sibling's Coin,Монета Собрата
+Sibling Coin,Монета Собрата
 Walking Cauldron,Ходячий Котел
 Dull Gray Aeon Stone,Тускло-Серый Камень Эонов
 Genealogy Mask,Генеалогическая Маска
@@ -3415,17 +3411,17 @@ Glittering Scarab,Сверкающий Скарабей
 Stalk Goggles,Стеблевые Очки
 Armor Latches,Доспешные Защелки
 Burnished Plating,Полированные Пластины
-Dragon's Crest,Герб Дракона
+Dragon Crest,Герб Дракона
 Twining Chains,Опоясывающие Цепи
-Traveler's Chair,Кресло Путешественника
+Traveler Chair,Кресло Путешественника
 Antler Arrow,Рогатая Стрела
 Aromatic Ammunition,Ароматическая Амуниция
 Lesser Bottled Sunlight,Малая Бутылка С Солнечным Светом
-Lesser Bravo's Brew,Малое Варево Смельчака
-Cat's Eye Elixir,Эликсир Кошачьего Глаза
+Lesser Bravo Brew,Малое Варево Смельчака
+Cat Eye Elixir,Эликсир Кошачьего Глаза
 Lesser Comprehension Elixir,Малый Эликсир Понимания
 Lesser Darkvision Elixir,Малый Эликсир Ночного Зрения
-Infiltrator's Elixir,Эликсир Лазутчика
+Infiltrator Elixir,Эликсир Лазутчика
 Lesser Focus Cathartic,Малая Сосредотачивающая Сыворотка
 Lesser Sinew-Shock Serum,Малая Мускульная Сыворотка
 Minor Winterstep Elixir,Слабый Эликсир Зимнего Шага
@@ -3442,7 +3438,7 @@ Static Snare,Силок Статического Разряда
 Bronze Bull Pendant,Бронзовый Кулон Быка
 Crying Angel Pendant,Кулон Плачущего Ангела
 Effervescent Ampoule,Шипучая Ампула
-Hunter's Bane,Проклятие Охотника
+Hunter Bane,Проклятие Охотника
 Jade Cat,Нефритовый Кот
 Mesmerizing Opal,Завораживающий Опал
 Monkey Pin,Обезьянья Заколка
@@ -3461,14 +3457,14 @@ Origin Unguent,Мазь Первоисточника
 Moonlit Ink,Лунные Чернила
 Sneezing Powder,Чихательный Порошок
 Lesser Quickmelt Slick,Малое Пятно Быстрого Таяния
-Lovers' Ink,Чернила Влюбленных
+Lovers Ink,Чернила Влюбленных
 Weapon +1,Оружие +1
 Glamorous Buckler,Блистательный Баклер
 Weapon Potency Rune +1,Руна Мощи Оружия +1
 Fanged,Клыкастая
-Gunner's Saddle,Седло Стрелка
+Gunner Saddle,Седло Стрелка
 Archaic Wayfinder,Архаичный Путеводный Компас
-Pathfinder's Coin,Монета Патфайндера
+Pathfinder Coin,Монета Патфайндера
 Bottomless Stein,Бездонная Кружка
 Flask of Fellowship,Фляга Товарищества
 Holy Steam Ball,Шар Святого Пара
@@ -3507,11 +3503,11 @@ Lumestin,Луместин
 Crimsonne,Кримсонн
 Glowdrop,Светокапь
 The Puzzle Box,Шкатулка-Головоломка
-Lumestin's Manor,Поместье Луместина
+Lumestin Manor,Поместье Луместина
 Hall of Screams,Зал Воплей
 Lightless Tube,Бессветная Труба
 Lightless Well,Бессветный Колодец
-Lumestin's Workshop,Мастерская Луместина
+Lumestin Workshop,Мастерская Луместина
 Vault,Хранилище
 Light Depository,Депозитарий Света
 Hall of Ants,Зал Муравьёв
@@ -3519,8 +3515,8 @@ Hall of Symbols,Зал Символов
 Service Corridor,Служебный Коридор
 Corridor of Defenses,Коридор Обороны
 Ant Castle,Замок Муравьёв
-Crimsonne’s Retreat,Убежище Кримсонны
-Lumestin’s Refuge,Укрытие Луместина
+Crimsonne Retreat,Убежище Кримсонны
+Lumestin Refuge,Укрытие Луместина
 Blessed Book,Благословенная Книга
 Smoky Black Key,Дымчатый Чёрный Ключ
 Lightcrafted Objects,Светотворенные Предметы
@@ -3551,7 +3547,7 @@ Jeralbeena,Джелреана
 Katissa,Катисса
 Samley,Сэмли
 Melia,Мелия
-Chiselrock’s Prison,Тюрьма Чизлрока
+Chiselrock Prison,Тюрьма Чизлрока
 Court of Regents,Суд Регентов
 Temple of All Gods,Храм Всем Богов
 Orb of Gold Dragonkind,Сфера Золотого Рода Драконов
@@ -3560,20 +3556,20 @@ Mountainheart,Мастер-Гор
 Kolarun Chiselrock,Коларун Чизелрок
 Kolarun,Коларун
 Chiselrock,Чизлрок
-Stonemason’s Guild,Гильдия Каменщиков
+Stonemason Guild,Гильдия Каменщиков
 Guild of Finery,Гильдия Искусств
 Guild of Arms,Гильдия Оружия
 Physic Guild,Гильдия Атлетов
-Anvillers’ Guild,Гильдия Наковален
+Anvillers Guild,Гильдия Наковален
 Forgemaster Kelda Halrig,Мастер-Кузнец Хельда Халриг
 Forgemaster,Мастер-Кузнец
-Carpenters’ Guild,Гильдия Плотников
+Carpenters Guild,Гильдия Плотников
 Alljoiner Torra Garnis,Мастер-Столяр Торра Гарнис
 Alljoiner,Мастер-Столяр
 Torra Garnis,Торра Гарнис
 Torra,Торра
 Garnis,Гарнис
-Gamblers’ Guild,Гильдия Игр
+Gamblers Guild,Гильдия Игр
 Fortunate Algera Kord,Мастер-Удачи Алгера Корд
 Fortunate,Мастер-Удачи
 Algera Kord,Алгера Корд
@@ -3617,38 +3613,38 @@ The Bound,Связанные
 The Starved,Голодные
 The Barricade,Район Баррикад
 Garrison,Гарнизон
-Magrim’s Watch,Дозоры Магрима
+Magrim Watch,Дозоры Магрима
 Magrim,Магрим
 Wall of the Ancients,Стена древних
 Commerce,Коммерция
 The Archive,Архив
 Guild Halls,Залы Гильдий
 House of Oaths,Дом Клятв
-Regents’ Hall,Зал Регентов
+Regents Hall,Зал Регентов
 Earthfire,Жар Земли
 Farmburrow,Нора
 Lakeside,Берег
-Traveler’s Quarter,Район Путешественников
-Anvillers’ Forge,Кузница Наковален
+Traveler Quarter,Район Путешественников
+Anvillers Forge,Кузница Наковален
 Clocktower,Часовая башня
-Droskar’s Forge,Кузница Дроскара
+Droskar Forge,Кузница Дроскара
 Hidden Forge,Спрятанная Кузница
 Treehouses,Домики на деревьях
 Fungus Farms,Фермы Грибов
 Bluecrab Lake,Озеро Синих Крабов
 Lakeside Bathhouse,Баня на берегу
-Nadrym’s Barbershop,Парикмахерская Надрима
-Grandmothers’ Alehouse,Рецепт Бабушек
+Nadrym Barbershop,Парикмахерская Надрима
+Grandmothers Alehouse,Рецепт Бабушек
 Memorial of Kings,Мемориал королей
 Sleep Like a Stone,Спи как Камень
 Whims of Fortune,Испытание Удачи
 Earthfire Avenue,Авеню Жара Земли
 Temple of Torag,Храм Торага
-Flitch’s Flat,Квартира Флитча
+Flitch Flat,Квартира Флитча
 Ministry of Tithes,Министерство Десятин
 Arcanium Abjurant,Арканум Абьюрант
 Emerald Guardhouse,Дом Изумрудной Стражи
-Themolin’s Warehouse,Склад Темолина
+Themolin Warehouse,Склад Темолина
 Shard Cove,Бухта Осколков
 Envy Row East,Восточная Улица Зависти
 City Docks,Городские Доки
@@ -3676,7 +3672,7 @@ Matthias Rothenaicher,Маттиас Ротенаихер
 Tony Barnett,Тони Барнетт
 Sonja Morris,Соня Моррис
 Tellith,Теллит
-Rolanna’s Prayer,Молитва Роланны
+Rolanna Prayer,Молитва Роланны
 Merry Mayfly,Веселая Майская Мушка
 Lightbringer,Принесущий Свет
 Emerald Guards,Изумрудные Стражи
@@ -3814,7 +3810,7 @@ Ceiba Creek,Ручей Сейба
 Ceiba River,Река Сейба
 Willowshore Hinterlands,Окрестности Ивобережья
 Wall of Ghosts,Стена Призраков
-Mindscape Border,Граница Чертогов Разума
+Mindscape Border,Граница Пейзажев Разума
 Dragonfly Creek,Ручей Стрекоз
 Small Farm,Маленькая Ферма
 Hand of Spring,Рука Весны
@@ -3828,7 +3824,7 @@ Seasonal Creek,Ручей Сезонов
 Willowshore,Ивобережье
 Season of Ghosts,Сезон Призраков
 Tan Sugi Monastery,Монастырь Тан Суги
-Pilgrim’s Path,Тропа Пилигрима
+Pilgrim Path,Тропа Пилигрима
 Night of Broken Blades,Ночь Сломанных Клинков
 Lung Wa,Лунг Ва
 Southbank,Южный Берег
@@ -3849,7 +3845,7 @@ Ceiba-Duyue Exchange,Биржа Сейба-Ду Юэ
 Fisheries,Рыболовство
 Dock,Пристань
 Abandoned Estates,Заброшенные Поместья
-Leshy’s Saloon,Салон Леших
+Leshy Saloon,Салон Леших
 Bones of the Forgotten,Кости Забытого
 The Great Willow,Великий Ива
 Spider Gate,Врата Паука
@@ -3860,7 +3856,7 @@ Eyes of Fumeiyoshi,Глаза Фумейоши
 Moon Marsh,Лунное Болото
 Foxhollow,Лисья Нора
 Karahai,Карахай
-Hunter’s Hut,Хижина Охотника
+Hunter Hut,Хижина Охотника
 Apple Road,Яблочная Дорога
 Specterwood,Лес Духов
 Shenmen,Шенмен
@@ -3886,7 +3882,7 @@ Huo Tian-Zhe,Хо Тянь-Чжэ
 Second Best,Второе Место
 Eternal Lantern,Вечный Фонарь
 Igawa Jubei,Игава Джубей
-Mother’s Coil,Спираль Матери
+Mother Coil,Спираль Матери
 Granny Hu,Бабушка Ху
 Old Matsuki,Старец Мацуки
 Zhi Hui,Чжи Хуэй
@@ -3907,14 +3903,14 @@ Luda Bama,Люда Бама
 Mushroom House,Грибной Домик
 Luo Xi Yang,Лю Си Янг
 Nadoya Sanmi,Надоя Санми
-Treesparrow’s Rest,Древесный Воробей
+Treesparrow Rest,Древесный Воробей
 Mountain Summit Grass,Трава На Вершине Горы
 Rajul Samudra,Раджул Самудра
 Willowshore Dock,Док Уиллоушора
 Mother Otis,Матушка Отис
 Matsuki Estate,Поместье Мацуки
 Yun Mong-un,Юн Монг-Ун
-Woodcarver's Guild,Гильдия Резчиков по Дереву
+Woodcarver Guild,Гильдия Резчиков по Дереву
 Zataku,Затаку
 Zheng Peng,Чжэн Пэнг
 Woodraft Lake,Озеро Деревянного Ерша
@@ -3932,10 +3928,509 @@ Ittan-momen,Иттан-момэн
 buso,бусо
 Rokurokubi,Рокурокуби
 Mo Douqiu,Мо Дуцю
-noppera-bo,Ноппэрабо
+noppera-bo,Ноппера-бо
 Boneyard,Могильник
 Hai-er Ha,Хай-эр Ха
-mindscape,Чертоги Разума
+mindscape,Пейзаж Разума
 Hu Lelong,Ху Лелонг
 Sanmi,Санми
-@Check,@Check
+Ingnovim Tluss,Ингновим Тлусс
+Ingnovim,Ингновим
+Tluss,Тлусс
+Ingnovim Assistant,Помощник Ингновима
+Promise Guard,Страж Обещания
+Promise,Обещание
+Aiudara Wraith,Рэйф Айдара
+Aiudara,Айдар
+Animated Dragonstorm,Оживший Драконий Шторм
+Animated,Оживший
+Dragonstorm,Драконий Шторм
+Dragonstorm Fire Giant,Гигант Драконего Шторма
+Hermean Mutant,Мутант Хермеи
+Emaliza Zandivar,Эмилиза Зандивар
+Emaliza,Эмилиза
+Zandivar,Зандивар
+Ilgreth,Илгрит
+Inizra Arumelo,Инизра Арумело
+Inizra,Инизра
+Arumelo,Арумело
+Rinnarv Bontimar,Риннарв Бонтимар
+Rinnarv,Риннарв
+Bontimar,Бонтимар
+Vazgorlu,Вазгорлу
+Xotani The Firebleeder,Ксотани Огнекровый
+Xotani,Ксотани
+Firebleeder,Огнекровый
+Candlaron Echo,Эхо Кандларона
+Candlaron,Кандларон
+Dragonshard Guardian,Хранитель Драконьего Рода
+Guardian,Хранитель
+Lesser Manifestation Of Dahak,Младшее Проявление Дахака
+Manifestation Of Dahak,Проявление Дахака
+Manifestation,Проявление
+Tarrasque The Armageddon Engine,Тараск Орудие Армагеддона
+Tarrasque,Тараск
+The Armageddon Engine,Орудие Армагеддона
+Aluum Enforcer,Алюум-Силовик
+Aluum,Алюум
+Enforcer,Силовик
+Zephyr Guard,Страж-Зефир
+Zephyr,Зефир
+Scarlet Triad Mage,Алый Маг
+Scarlet Triad Enforcer,Алый Силовик
+Immortal Ichor,Бессмертная Субстанция
+Spiritbound Aluum,Заточенный Алюум
+Scarlet Triad Boss,Алый Босс
+Bshez Shak,Бшез Шак
+Bshez,Бшез
+Shak,Шак
+Sand Claws,Когти Песка
+Weathered Wail,Вой Ветра
+Xotanispawn,Порождение Ксотани
+Ishti,Ишти
+Uri Zandivar,Ури Зандивар
+Uri,Ури
+Teyam Ishtori,Тейям Иштори
+Teyam,Тейям
+Ishtori,Иштори
+Damurdiel,Дамурдиэль
+shelter,убежище
+corpses,трупы
+elementals,элементали
+survivors,выжившие
+Bluemarket,Синий Рынок
+granary,зернохранилище
+Royal Rise,Королевский Подъем
+monsters,монстры
+local leaders,местные лидеры
+rescuers,спасатели
+supplies,припасы
+Dust Wendigo,Пыльный Вендиго
+Chief Minarchist,Главный Минархист
+Soukmaster,Мастер Базара
+Saving the Scattered,Спасение Рассеянных
+Chapter,Глава
+Witchwyrd Ecology,Экология Вичворд
+Adventure Toolbox,Инструментарий Приключений
+Promise of Fire,Обещание Огня
+Narvimelbs,Нарвимелбс
+Findeladlara,Финделадлара
+Inner City Golden Oasis,Золотой Оазис Внутреннего Города
+Finderplain,Финдерплейн
+Carman Rajani,Карман Раджани
+Carman,Карман
+Rajani,Раджани
+Cratonys,Кратонис
+Shanrigol Heap,Шанригол-Куча
+Shanrigol,Шанригол
+Siora Fallowglade,Сиора Фэлоуглейд
+Siora,Сиора
+Fallowglade,Фэлоуглейд
+Squabbling Poltergeist,Ссорящийся полтергейст
+Gibtas Bounder,Гибтас-Прыгун
+Chafkhem,Чафкем
+Viscous Black Pudding,Вязкий Черный Пуддинг
+Black Pudding,Черный Пуддинг
+Bone Gladiator,Костяной Гладиатор
+Seugathi Guard,Сьюгати-Страж
+Seugathi,Сьюгати
+Sod Hound,Земляная Гончая
+Living Landslide,Живой Оползень
+Ochre Jelly,Бурое Желе
+Seugathi Researcher,Сеугати-Исследователь
+Destrachan,Дестрахан
+Afflicted Irnakurse,Болезненный Ирнакурс
+Irnakurse,Ирнакурс
+Lallizanx,Лаллизанкс
+Warped Brew Morlock,Морлоки Пойла
+Vischari,Вишари
+Gulzash,Гулзаш
+Kragala,Крагала
+Nox,Нокс
+Ryta,Райта
+Barbazu Vanguard,Барбазу Авангарда
+Jafaki,Джафаки
+Drider,Драук
+Shanrigol Behemoth,Шанригол-Громада
+Barbazu Drill Sergeant,Барбазу Инструктор
+Azvalvigander,Азвальвигандра
+Barcumbuk,Баркамбук
+Hellforge Barbazu,Барбазу Кузницы
+Iyagian,Ягий
+Aulr,Аулр
+Urevian,Уревиан
+Cynemi,Синеми
+Mulventok,Мульвенток
+Witchfire Warden,Ведьмин Огонь Хранитель
+Ysondkhelir,Йзондкелир
+Giant Crawling Hand,Гигантская Ползучая Рука
+Crawling Hand,Ползучая Рука
+Sacuishu,Сакуишу
+Swarming Stance,Стойка Роя
+Stench,Вонь
+Glow,Свечение
+Swarming Bites,Укусы Роя
+Split,Разделение
+The Enlightened Path,Путь Прозрения
+In the Ruins of Wisdom,В Руинах Мудрости
+First Long Night,Первая Долгая Ночь
+Feast of the Kami,Пир Ками
+The Face at the Foot of the Bed,Лик у Подножия Кровати
+Willowshore’s heroes,Герои Ивобережья
+Winter’s Breath ritual,Ритуал Зимнего Дыхания
+Turning of the Seasons,Смена Времен Года
+Sugi trees,Деревья Суги
+Researching the Curse,Изыскания Проклятия
+Zoudou,Зода
+Library Lore,Библиотечные Знания
+Entertainment Points,Очки Развлечения
+Tea Set,Чайный Набор
+Hope Points,Очки Надежды
+Vanishings,Исчезновения
+An Offering for Daikitsu,Подношение Дайкитсу
+Exorcists,Экзорцисты
+RP,ОИ
+Research Points,Очки Изыскания
+Events,События
+Event,Событие
+Architecture Lore,Знания Архитектуры
+The Willowshore Curse,Проклятие Ивобережья
+Preparation Points,Очки Подготовки
+Bakeneko,Бакэнэко
+Kodama,Кодама
+Farmers’ Union,Союз Фермеров
+The Arena,Арена
+Grand Coliseum,Великий Колизей
+duneshaker solifugid,Сотрясатель Дюн
+Pactmaster,Мастер Договора
+Red Pyramid,Красная Пирамида
+Auction,Аукцион
+Pactbroker,Посредник Пакта
+Jelek Jaziman,Джелек Джазиман
+ballroom,бальный зал
+solifugid,Сольпуг
+Jelek,Джелек
+Jaziman,Джазиман
+Lost Aiudara,Затерянные Айдары
+Duneshadow,Тень Дюн
+Caravan Troubles,Проблемы каравана
+Poison Makers’ Guild,Гильдия Отравителей
+Witchwyrd,Вичвирд
+Guild Lore,Знания Гильдий
+Jeweler's Guild,Гильдия ювелиров
+League of Peshmongers,Лига Торговцев Пешем
+Council of Guilds,Совет Гильдий
+Aspis Consortium,Консорциум Аспид
+Imperial Union of Breeders,Союз Разводчиков
+Jewelers’ Guild,Гильдия Ювелиров
+Fleshmongers’ Federation,Федерация Торговцев Плотью
+Fraternal Order of the Anvil,Орден Наковальни
+Carpenters’ Guild,Гильдия Плотников
+Guild of Butchers and Bakers,Гильдия Мясников и Пекарей
+Guild of Streetsweepers and Dung Carters,Гильдия Уборщиков
+League of Upright Barristers,Лига Честных Юристов
+Order of Alchemists and Potion Makers,Орден Алхимиков
+Gladiators’ Guild,Гильдия Гладиаторов
+Hashim ibn Sayyid,Хашим ибн Саид
+Hashim,Хашим
+Ytrim Azas,Итрим Азас
+Aldane Zulran,Алдейн Зулран
+Exavisu Kerndalion,Экзавису Керндалион
+Sehtba al-Izora,Сехтба аль-Изора
+Hahcuss Hrann,Хахкасс Хранн
+Rin Zelver,Рин Зелвер
+Pardu of Scarhill,Парду из Скархилла
+Treman Ulkulratu,Треман Улкулрату
+Torbin Dooly,Торбин Дули
+Stral,Страл
+Eketra Sheerpeak,Экетра Ширпик
+Huena Ilvos,Хуна Ильвос
+Okztrok,Окзтрок
+Huena,Хуна
+Ilvos,Ильвос
+Spikeface,Шиполицый
+Sayyid,Саид
+Child of Belcorra,Чад Белкорры
+Dragon Blood Puffball,Гриб Драконья Кровь
+Dread Wisp,Жуткий Огонёк
+Dulac,Дюлак
+Elder Child of Belcorra,Старший Чад Белкорры
+Murmur,Бормотунья
+Nyzuros,Низурос
+Padli,Падли
+Urthagul,Уртагул
+Boss Skrawng,Босс Скронг
+Mister Beak,Мистер Клюв
+Flickerwisp,Мерцающий Огонёк
+Corpselight,Трупный Огонёк
+Stonescale Spirits,Духи Каменной Чешуи
+Blood of Belcorra,Кровь Белкорры
+Wrin Sivinxi,Врин Сивинкси
+Bloodsiphon,Кровосос
+Blood Drain,Высасывание Крови
+Death Burst,Взрыв Смерти
+Morlock Cultist,Морлок-Культист
+Occult Attack,Оккультная Атака
+Morlock Engineer,Морлок-Инженер
+Battle Hammer,Боевой молот
+Refuse Launcher,Мусоромёт
+Improvised Projectile,Снаряд-Мусор
+Uncanny Tinker,Невороятный Механик
+Scavenger,Собиратель
+Morlock Scavenger,Морлок-Собиратель
+Scuttling Attack,Атака на Бегу
+Scalathrax,Скалатракс
+Leg Quill,Шипы лап
+Spray Toxic Oil,Распылить масло
+Oily Scales,Покрытый маслом
+Scalathrax Venom,Яд Скалатракса
+Doom of Tomorrow,Грядущая беда
+Apocalypse Beam,Луч Апокалипсиса
+Spike Launcher,Шипомёт
+Line of Fire,Линия обстрела
+Spike,Шип
+Ghoul Fever,Лихорадка Гуля
+Paralysis,Паралич
+Consume Tattooed Flesh,Поглощение Татуированной Плоти
+Leap Attack,Резкий Прыжок
+Ghost of Commoner,Привидение простолюдина
+Site Bound,Связь с местом
+Despairing Cry,Стон Отчаяния
+Necklace with Flesh,Ожерелье с кусками плоти
+Consume Flesh,Поглощение Плоти
+Malevolent Possession,Одержимость
+Poisoned Breath,Ядовитое Дыхание
+Jarelle Kaldrian,Джарель Калдриан
+Nhakazarin,Наказарин
+Consume Masterpiece,Поглощение Плоти Шедевра
+Vengeful Furnace,Мстительная Печь
+Ghost Attack,Нападение Призраков
+Flaming Whip,Горящая Плеть
+Burning Knowledge,Сжигания Знания
+Watching Wall,Глядящая Стена
+Someone Is Watching,Кто-то Наблюдает
+Jaul Wolf,Волк Яула
+Jaul Coordination,Координация с Яулом
+Volluk Azrinae,Воллук Азриней
+Squirming Embrace,Объятия Роя
+Swarm Shape,Форма Роя
+Fast Healing 7,Быстрое Исцеление 7
+Discorporate,Разделение
+Hateful Memories,Ненавистные Воспоминания
+Otari Ilvashti,Отари Ильвашти
+Infested Shadow,Воспользоваться Тенью
+Filth Fever,Грязная Лихорадка
+Voidglutton,Пустоглот
+Ectoplasmic Web,Экто-Паутина
+Consume Light,Притушить Свечение
+Feed on Fear,Подпитка Страхом
+Ectoplasmic Web Trap,Экто-Паутина-Ловушка
+Fearful Strike,Устрашающий Удар
+Magic Immunity,Магический Иммунитет
+Jaul Mezmin,Яул Мезмин
+Wolf Empathy,Волчья Эмпатия
+Curse of the Werewolf,Проклятие Оборотня
+Lunacy of the Moon,Лунное Безумие
+Wolf Coordination,Координация с Волком
+Wooden Chair,Деревянный Стул
+Pewter Mug,Оловянная Кружка
+Instinctual Tinker,Прирождённый механик
+Infernal Eye,Инфернальные Глаза
+Cocytan Filth,Коцитовая мерзость
+Fragment of Pendant,Фрагмент Кулона
+Dreshkan,Дрешкан
+Needle,Игла
+Defensive Needle,Ответ Иглой
+Needle Spray,Спрей Игл
+Partially Technological,Частичный Конструкт
+Stench Suppression,Подавление Вони
+Mosh,Толкаться
+Death Flame,Пламя Смерти
+Intense Performer,Боевое Выступление
+Musical Instrument,Музыкальный инструмент
+Fangs,Клыки
+Dance Moves,Движения в Танце
+Vocal Warm-Up,Вокальная Разминка
+Cheek Pouches,Защечные Мешки
+Swarming,Рой
+Fleshy Slap,Удар Плотью
+Bone Shard,Осколок Кости
+Sapping Squeeze,Истощающее Сжатие
+Undulating Step,Пролезающее Перемещение
+Shred Flesh,Срыватель Плоти
+Drill Field Barbazu,Барбазу Инструктор
+Beard,Борода
+Redeploy,Перестановка
+Wriggling Beard,Извивающаяся Борода
+Avernal Fever,Авернальная лихорадка
+Infernal Wound,Инфернальная рана
+Taskmaster's Lash,Лента погонщика
+Spit,Плевок
+Bouncing Slam,Толчок Прыжком
+Pinning Chomp,Забивание Жертвы
+Skillful Catch,Умелая Ловля
+Sudden Throw,Внезапный Бросок
+Surprise Attacker,Неожиданный Атакующий
+Painsight,Видение боли
+Unnerving Gaze,Нервирующий взгляд
+Animate Chains,Оживление цепей
+Focus Gaze,Сосредоточить взгляд
+Impaling Chain,Прокалывающая цепь
+Rusty Chains,Ржавые цепи
+Knowledge of Torture,Знания пыток
+Drumstick,Барабанная палочка
+Knock It Away,Сбить с толку
+Guiding Rhythm,Ритм наставления
+Percussive Reverberation,Ударная реверберация
+Web,Паутина
+Necrotic Decay,Некротический распад
+Web Trap,Паутина-ловушка
+Dune Candle,Свеча Пустыни
+Flare,Вспышка
+Heat Mirage,Тепловой Мираж
+Light the Living Wick,Разжигание Огня
+Gibtas Spawn Swarm,Рой Гибтасов
+Bounce,Отпрыгнуть
+Bounding Swarm,Прыжки Роем
+Groetan Candle,Свеча Гротуса
+Shock,Шок
+Go Dark,Погаснуть
+Show the Looming Moon,Появление Луны
+Seugathi Servant,Сьюгати-Прислужник
+Bite,Укус
+Command Confusion,Управление Замешательством
+Envenom Weapon,Отравить Оружие
+Mindfog Aura,Аура Тумана Разума
+Magic Item Mastery,Мастерство в Магических Предметах
+Seugathi Venom,Яд Сьюгати
+Spellvoid,Заклинательный Огонёк
+Feed on Magic,Питаться Магией
+Will-o'-the-Deep,Глубинный Огонёк
+Stay in the Fight,Удержать в Бою
+Fervent Command,Военный Приказ
+War Leader,Военный Лидер
+Explosive Decay,Смертельный Распад
+Psychokinetic Honing,Психокинетическое Усиление
+Shadow Hand,Теневая Рука
+Steal Shadow,Кража Тени
+Mark for Death,Метка Смерти
+Light Vulnerability,Уязвимость к свету
+Shadow Spawn,Теневое порождение
+Slink in Shadows,Скольжение в тенях
+Immobilizing Blow,Обездвиживающий Удар
+Wicked Bite,Истощающий Укус
+Adjust Shape,Изменение Формы
+Corrosive Mass,Коррозионная Масса
+Corrosive Touch,Касание Коррозии
+Suction,Присасывание
+Soul Scream,Крик Души
+Storm of Tentacles,Шторм Щупалец
+Fearful Curse,Проклятый Страхом
+Mind Lash,Ментальная Плеть
+Fragment of Urevian Pendant,Фрагмент Кулона
+Flaming Warhammer,Огненный Молот
+Flaming Light Hammer,Огненный Легкий Молот
+Rope,Веревка
+Flames of Fury,Пламя ярости
+Furious Fusillade,Яростный обстрел
+Rope Snare,Веревочный силок
+Warding Script,Глиф Защиты
+Despair,Аура Отчаяния
+Rejuvenation,Восстановление
+Mummy Rot,Гниль Мумии
+Deep End Sarglagon,Сарлагон-Шпион
+Tentacle Arm,Рука-щупальце
+Stygian Guardian,Стигский страж
+Drown,Утопление
+Heavy Aura,Тяжелая аура
+Sarglagon Venom,Яд сарлагона
+Gibtanius,Гибтаниус
+Bouncing Crush,Крушить Прыжком
+Powerful Stench,Мощная Вонь
+Acid Flask,Кислотная склянка
+Bottled Lightning,Молния в бутылке
+Quick Consumption,Быстрое Потребление
+Infused Items,Насыщенные Предметы
+Murschen,Муршен
+Red Claw,Красные Когти
+Red Ruin Stance,Стойка Красных Руин
+Camouflaged Step,Камуфлированное Перемещение
+Chameleon Skin,Кожа Хамелеона
+Summoning Chamber Erinys,Эриния Призыва
+100 feet of Erinys-Hair Rope,100 футов веревки из волос эринии
+Fragment of Urevian's Pendant,Фрагмент Кулона
+Flaming Longsword,Огненный Меч
+Flaming Composite Longbow,Огненный Лук
+Planar Fast Healing,Планарное Быстрое Исцеление
+No Breath,Нет Дыхания
+Debilitating Bite,Проклятый Укус
+Leng Ruby,Рубин Ленга
+Seugathi Reality Warper,Сьюгати-Исказитель
+Warp Reality,Исказить Реальность
+Diabolic Quill,Дьявольский Веер
+Draft Contract,Подписание Контракта
+Distracting Declaration,Отвлекающая Декларация
+Ward Contract,Защита Контракта
+Right of Inspection,Право на Видение
+Aruka,Арука
+Familiar Shadow,Теневой Приспешник
+Kawaka,Кавака
+Myna,Майна
+Myna Kawaka,Кавака Майна
+Spiritual Disruptor,Духовный Разрушитель
+Willowshore Waldgeist,Вальдгейст Ивобережья
+Waldgeist,Вальдгейст
+Yu Er,Юи Эр
+Zhen Luoyang,Чжэнь Лоянг
+Zhen,Чжэнь
+Luoyang,Лоянг
+Noppera-Bo Impersonator,Ноппера-бо Перевердыш
+Ren Mei Li,Рен Мей Ли
+Ren,Рен
+Mei,Мей
+Li,Ли
+Rin,Рин
+Arboreal Reaper,Дендроид Жнец
+Arboreal,Дендроид
+Reaper,Жнец
+Awakened Tree,Пробужденное Дерево
+Kagekuma,Кагекума
+Animated Axe,Оживший Топор
+Cao Chen,Цао Чэнь
+Cao,Цао
+Chen,Чэнь
+Hu Deming,Ху Деминг
+Hu,Ху
+Deming,Деминг
+Mago,Маго
+Kai,Кай
+Mercenary Enforcer,Опытный Наемник
+Sha Guanghao,Ша Гуань-Хао
+Sha,Ша
+Guanghao,Гуань-Хао
+Shimmerthief,Мерцающий Вор
+Shrine Maiden,Дева-Храмовница
+Vanth,Ванф
+Warding Bell,Защитный Колокол
+Akashti,Акашти
+Sobbing Nindoru,Рыдающий Ниндору
+Black Bean,Черная Фасоль
+Forgotten Spirit,Забытый Дух
+Grudge Spirit Power,Сила Духа - Обида
+Lurking Nindoru,Скрывающийся Ниндору
+Kinburi’s Sandals of Bounding,Сандалии Кинбури
+Manor Ward,Приусадебное отделение
+Mr Jelly,Мистер Джелли
+Nindoru Butterfly,Бабочка Ниндору
+Noppera-bo Oracle Impersonator,Ноппера-бо Перевердыш Оракул
+Pan Fenfang,Пан Фэнфанг
+Pan,Пан
+Fenfang,Фэнфанг
+Silsyche,Сильсиче
+Silver Collar,Серебряный ошейник
+Statue of Sigek,Статуя Сигека
+The Crane-Wife,Жена Журавля
+Vashu Ninth Life,Девять Жизней Вашу
+Minor Spirit Power,Малая Сила Духа
+Major Spirit Power,Главная Сила Духа
+Off-Guard,Застигнут врасплох

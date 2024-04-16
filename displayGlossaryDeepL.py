@@ -1,15 +1,10 @@
 import deepl
-import json
 
-# Загрузка конфигурации
-with open('config.json', 'r', encoding='utf-8') as config_file:
-    config = json.load(config_file)
-api_key = config['api_key']
-glossary_name = config['DeepL_glossary_name']  
+api_key = "<your_api_key>"
 
 # Замените 'your_api_key' на ваш ключ API DeepL и 'PF2e_2024_02' на имя вашего глоссария
 translator = deepl.Translator(api_key)
-
+glossary_name = "PF2e_2024_03"
 
 # Находим глоссарий по имени
 glossary = next((g for g in translator.list_glossaries() if g.name == glossary_name), None)

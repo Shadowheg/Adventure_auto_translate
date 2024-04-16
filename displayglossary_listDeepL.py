@@ -1,10 +1,6 @@
 import deepl
-import json
 
-# Загрузка конфигурации
-with open('config.json', 'r', encoding='utf-8') as config_file:
-    config = json.load(config_file)
-api_key = config['api_key']
+api_key = "<your_api_key>"
 
 # Замените 'your_api_key' на ваш ключ API DeepL
 translator = deepl.Translator(api_key)

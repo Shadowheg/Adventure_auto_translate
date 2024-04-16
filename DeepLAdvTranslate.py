@@ -4,43 +4,38 @@ import re
 import deepl
 import hashlib
 
-# Класс управления переводами
 class TranslationManager:
-    # Инициализация с путем к конфигурационному файлу
     def __init__(self, config_path='config.json'):
-        # Регулярное выражение для поиска специальных тегов и их атрибутов
         self.pattern = re.compile('(@\\w+\\[.*?])(\\{[^}]+\\})?')
-        # Загрузка конфигурации
         self.load_config(config_path)
-        # Инициализация переводчика DeepL
         self.translator = deepl.Translator(self.api_key)
-        # Инициализация кэша переводов
         self.translations_cache = {}
         self.translations_cache_modified = False
         self.translations_cache_hits = 0
         self.translations_cache_miss = 0
-        # Загрузка кэша переводов
         self.load_translations_cache()
-        # Подготовка рабочих директорий
         self.prepare_directories()
+        self.last_saved_cache_state = None  
 
-    # Загрузка конфигурации из файла
+
     def load_config(self, config_path):
         with open(config_path, 'r', encoding='utf-8') as config_file:
             config = json.load(config_file)
-        # Инициализация настроек из конфигурационного файла
         self.api_key = config['api_key']
         self.glossary_id = config['glossary_id']
-        self.file_path = config['file_path']
+        self.file_path = config['input_file_path']
         self.source_lang = config['source_lang']
         self.target_lang = config['target_lang']
         self.translations_cache_file = config['translations_cache_file']
         self.file_name_without_extension = Path(self.file_path).stem
         self.work_dir = 'work'
         self.result_dir = 'result'
-        # Пути к файлам для экстракции и переведённым данным
-        self.extracted_json_file_path = Path(self.work_dir) / f'{self.file_name_without_extension}_journal_extracted.json'
-        self.translated_json_file_path = Path(self.work_dir) / f'{self.file_name_without_extension}_journal_translated.json'
+        self.extracted_json_file_path = Path(self.work_dir) / f'{self.file_name_without_extension}_adventure_extracted.json'
+        self.translated_json_file_path = Path(self.work_dir) / f'{self.file_name_without_extension}_adventure_translated.json'
+        preset = config['Preset']
+        self.translation_paths = config.get(f'{preset}_PathTranslated', [])
+        self.normalized_paths = self.normalize_config_paths(self.translation_paths)
+
 
     # Загрузка кэша переводов
     def load_translations_cache(self):
@@ -100,105 +95,11 @@ class TranslationManager:
 
     # Основная функция для обновления данных приключения с учётом переводов
     def translate_and_update_adventure_data(self, adventure_data, translated_snippets):
-        # Обновление основной информации приключения
-        self.update_general_info(adventure_data, translated_snippets)
-        
-        # Обновление актеров и предметов
-        for actor in adventure_data.get('actors', []):
-            self.update_actor_and_items(actor, translated_snippets)
-        
-        # Обновление имен папок
-        self.update_folders_names(adventure_data, translated_snippets)
-        
-        # Обновление имен токенов
-        self.update_token_names(adventure_data, translated_snippets)
-        
-        # Обновление журналов и сцен
-        self.update_journals_and_scenes(adventure_data, translated_snippets)
-        
+        # Интеграция переведенных сниппетов обратно в данные приключения
+        self.reintegrate_translated_snippets(adventure_data, translated_snippets)
         return adventure_data
 
     
-    def update_general_info(self, adventure_data, translated_snippets):
-        adventure_data['name'] = translated_snippets.get('name', adventure_data.get('name', ''))
-        adventure_data['description'] = translated_snippets.get('description', adventure_data.get('description', ''))    
-
-    # Обновление данных актёров, включая их имена и детали
-    def update_actor_and_items(self, actor, translated_snippets):
-        actor_id = actor.get('_id', '')
-        actor['name'] = translated_snippets.get(f'actors_{actor_id}_name', actor.get('name', ''))
-        for detail_key in ['disable', 'description', 'reset']:
-            actor_detail_key = f'actors_{actor_id}_system_details_{detail_key}'
-            if actor_detail_key in translated_snippets:
-                actor.setdefault('system', {}).setdefault('details', {})[detail_key] = translated_snippets[actor_detail_key]
-
-        for item in actor.get('items', []):
-            item_id = item.get('_id', '')
-            item['name'] = translated_snippets.get(f'actors_{actor_id}_items_{item_id}_name', item.get('name', ''))
-            item_description_key = f'actors_{actor_id}_items_{item_id}_system_description_value'
-            if item_description_key in translated_snippets:
-                item.setdefault('system', {}).setdefault('description', {})['value'] = translated_snippets[item_description_key]
-
-    def update_folders_names(self, adventure_data, translated_snippets):
-        if 'folders' in adventure_data:
-            for folder in adventure_data['folders']:
-                folder_id = folder.get('_id', '')
-                folder_name_key = f'folders_{folder_id}_name'
-                if folder_name_key in translated_snippets:
-                    folder['name'] = translated_snippets[folder_name_key]
-
-    def update_token_names(self, adventure_data, translated_snippets):
-        if 'actors' in adventure_data:
-            for actor in adventure_data['actors']:
-                if 'prototypeToken' in actor:
-                    token = actor['prototypeToken']
-                    token_id = actor.get('_id', '')  # Используйте ID актера, если у токена нет уникального ID
-                    token_name_key = f'actors_{token_id}_prototypeToken_name'
-                    if token_name_key in translated_snippets:
-                        token['name'] = translated_snippets[token_name_key]
-
-    
-
-    # Обновление названий журналов и сцен
-    def update_journals_and_scenes(self, adventure_data, translated_snippets):
-        # Обработка каждого журнала
-        for journal in adventure_data['journal']:
-            journal_id = journal.get('_id', 'No ID')
-            # Обновление имени журнала
-            if 'name' in journal:
-                journal['name'] = translated_snippets.get(f'journal_{journal_id}_name', journal['name'])
-            # Обработка страниц журнала
-            for page in journal.get('pages', []):
-                page_id = page.get('_id', None)
-                text_content = page.get('text', {}).get('content', None)
-                page_name = page.get('name', None)
-                # Обновление содержания страницы
-                if text_content:
-                    page['text']['content'] = translated_snippets.get(f'journal_{journal_id}_pages_{page_id}_text', text_content)
-                # Обновление имени страницы
-                if page_name:
-                    page['name'] = translated_snippets.get(f'journal_{journal_id}_pages_{page_id}_name', page_name)
-        # Обработка каждой сцены
-        for scene in adventure_data.get('scenes', []):
-            scene_id = scene.get('_id', 'No ID')
-            scene_name_key = f'scene_{scene_id}_name'
-            # Обновление имени сцены, если доступен перевод
-            if scene_name_key in translated_snippets:
-                scene['name'] = translated_snippets[scene_name_key]
-            
-            # Обновление имен токенов в сцене, если доступен перевод
-            for token in scene.get('tokens', []):
-                token_id = token.get('_id', '')
-                token_name_key = f'scene_{scene_id}_tokens_{token_id}_name'
-                if token_name_key in translated_snippets:
-                    token['name'] = translated_snippets[token_name_key]
-
-            # Обновление текстов заметок в сцене, если доступен перевод
-            for note in scene.get('notes', []):
-                note_id = note.get('_id', '')
-                note_text_key = f'scene_{scene_id}_notes_{note_id}_text'
-                if note_text_key in translated_snippets:
-                    note['text'] = translated_snippets[note_text_key]
 
     def do_json_generation(self):
         # Check for the existence of the translated file
@@ -222,147 +123,164 @@ class TranslationManager:
         total_length = sum(len(text) for text in translation_snippets.values() if text)
         cost = tariff * total_length
         return total_length, cost
+
+        
     # Извлечение сниппетов для перевода из JSON файла
-    def extracty_snippets(self, file_path):
-        try:
-            adventure_data = json.load(Path(file_path).open('r', encoding='utf-8'))
-            translation_snippets = self.extract_adventure_translation_snippets(adventure_data)
-            # Сохранение извлеченных сниппетов в файл
-            with self.extracted_json_file_path.open('w', encoding='utf-8') as file:
-                json.dump(translation_snippets, file, ensure_ascii=False, indent=4)
-            return translation_snippets
-        except FileNotFoundError:
-            print(f"File not found: {file_path}")
-            return {}
-        except json.JSONDecodeError:
-            print(f"Error decoding JSON from file: {file_path}")
-            return {}
+    def extract_snippets(self, file_path):
+        with open(file_path, 'r', encoding='utf-8') as file:
+            adventure_data = json.load(file)
+        snippets = self.extract_from_path(adventure_data, self.normalized_paths)
+        with open(self.extracted_json_file_path, 'w', encoding='utf-8') as f:
+            json.dump(snippets, f, indent=4, ensure_ascii=False)
+        return snippets
+
+
 
     def do_translation(self, translation_snippets):
         translated_snippets = {}
         total_snippets = len(translation_snippets)
         translated_count = 0
-        
+        last_saved_percentage = -10
         for key, text in translation_snippets.items():
-            translated_text = self.translate_text_with_deepl(text)
-            if translated_text != text:  # Checks if a new translation was performed.
-                cleaned_text = self.clean_translated_text(translated_text)
-                translated_snippets[key] = cleaned_text
-                self.translations_cache_modified = True
+            # Пропускаем пустые строки
+            if not text.strip():
+                translated_snippets[key] = text  # Сохраняем пустой текст как есть
+                continue
+            # Экранируем специальные символы
+            preserved_text = self.extract_and_preserve(text)
+            translated_text = self.translate_text_with_deepl(preserved_text)
+            # Очищаем переведенный текст от специальных тегов
+            cleaned_text = self.clean_translated_text(translated_text) if translated_text != preserved_text else text
+            translated_snippets[key] = cleaned_text
+            self.translations_cache_modified = True
             translated_count += 1
-            print(f'\rTranslation progress: {translated_count / total_snippets * 100:.2f}% ({translated_count}/{total_snippets})', end='')
-        
-        print('\nTranslation completed.')  # Ensure to break the line after progress updates.
+            current_percentage = int((translated_count / total_snippets) * 100) 
+            # Обновляем прогресс перевода, только если процент изменился
+            if current_percentage > last_saved_percentage:
+                if current_percentage % 10 == 0 and current_percentage != 0:
+                    # Сохраняем кеш и выводим сообщение только на кратных 10% значениях
+                    self.save_translations_cache()
+                    print(f'\rTranslation progress: {current_percentage}% ({translated_count}/{total_snippets}) - Cache saved at {current_percentage}% progress.', end='')
+                else:
+                    print(f'\rTranslation progress: {current_percentage}% ({translated_count}/{total_snippets})', end='')
+                last_saved_percentage = current_percentage
+        print('\nTranslation completed.')
+        if self.translations_cache_modified:
+            self.save_translations_cache()
+            print('Final cache saved.')
+        # Сохраняем переведенные сниппеты в файл
         with self.translated_json_file_path.open('w', encoding='utf-8') as file:
             json.dump(translated_snippets, file, ensure_ascii=False, indent=4)
-        print(f'Extracted data saved to file: {self.extracted_json_file_path}')
         print(f'Translated data saved to file: {self.translated_json_file_path}')
 
-    def extract_adventure_translation_snippets(self, adventure_data):
-        data = {}
-        # Добавляем обработку новых ключей
-        data['name'] = adventure_data.get('name', '')
-        data['description'] = adventure_data.get('description', '')
-        
-        for actor in adventure_data.get('actors', []):
-            actor_id = actor.get('_id', '')
-            data[f'actors_{actor_id}_name'] = actor.get('name', '')
-            
+    def save_translations_cache(self):
+        """Saves the translations cache to a file if there were changes since the last save."""
+        current_cache_state = hashlib.md5(json.dumps(self.translations_cache, sort_keys=True).encode('utf-8')).hexdigest()
+        if self.translations_cache_modified and current_cache_state != self.last_saved_cache_state:
+            with open(self.translations_cache_file, 'w', encoding='utf-8') as file:
+                json.dump(self.translations_cache, file, ensure_ascii=False, indent=4)
+            self.translations_cache_modified = False
+            self.last_saved_cache_state = current_cache_state  # Обновляем состояние после сохранения
+            print('Translations cache saved.')
 
-            # Извлечение имени токена
-            prototype_token_name = actor.get('prototypeToken', {}).get('name', '')
-            if prototype_token_name:
-                data[f'actors_{actor_id}_prototypeToken_name'] = self.extract_and_preserve(prototype_token_name)
+    def extract_from_path(self, data, valid_paths):
+        snippets = {}
+        def recurse(data, current_path='', ids=None):
+            ids = ids or {}
+            if isinstance(data, dict):
+                for key, value in data.items():
+                    new_path = f"{current_path}.{key}" if current_path else key
+                    temp_path = new_path.replace('{key}', key) if '{key}' in current_path else new_path
+                    if self.match_path(temp_path, valid_paths):
+                        id_path = self.generate_id_path(temp_path, ids)
+                        snippets[id_path] = value
+                    else:
+                        recurse(value, new_path, dict(ids))
+            elif isinstance(data, list):
+                for index, item in enumerate(data):
+                    new_path = f"{current_path}[{index}]"
+                    recurse(item, new_path, dict(ids))
 
-            # Добавляем детали актера
-            details = actor.get('system', {}).get('details', {})
-            for detail_key in ['disable', 'description', 'reset']:
-                data[f'actors_{actor_id}_system_details_{detail_key}'] = details.get(detail_key, '')
-            
-            # Обработка предметов актера
-            for item in actor.get('items', []):
-                item_id = item.get('_id', '')
-                data[f'actors_{actor_id}_items_{item_id}_name'] = item.get('name', '')
-                item_description = item.get('system', {}).get('description', {}).get('value', '')
-                data[f'actors_{actor_id}_items_{item_id}_system_description_value'] = item_description
+        recurse(data)
+        return snippets
 
-        # Extract journal names, page names, and text content
-        for journal in adventure_data.get('journal', []):
-            journal_id = journal.get('_id', 'No ID')
-            if 'name' in journal:
-                data[f'journal_{journal_id}_name'] = journal['name']
-            for page in journal.get('pages', []):
-                page_id = page.get('_id', 'No Page ID')
-                page_name = self.extract_and_preserve(page.get('name', ''))
-                text_content = self.extract_and_preserve(page.get('text', {}).get('content', ''))
-                data[f'journal_{journal_id}_pages_{page_id}_name'] = page_name
-                data[f'journal_{journal_id}_pages_{page_id}_text'] = text_content
-
-        # Extract scene names
-        for scene in adventure_data.get('scenes', []):
-            scene_id = scene.get('_id', 'No ID')
-            scene_name = self.extract_and_preserve(scene.get('name', ''))
-            data[f'scene_{scene_id}_name'] = scene_name
-
-            # Извлечение имен токенов в сценах
-            for token in scene.get('tokens', []):
-                token_id = token.get('_id', '')
-                token_name = token.get('name', '')
-                if token_name:
-                    data[f'scene_{scene_id}_tokens_{token_id}_name'] = self.extract_and_preserve(token_name)
-
-            # Извлечение заметок в сценах
-            for note in scene.get('notes', []):
-                note_id = note.get('_id', '')
-                note_text = note.get('text', '')
-                if note_text:
-                    data[f'scene_{scene_id}_notes_{note_id}_text'] = self.extract_and_preserve(note_text)
+    def normalize_config_paths(self, translation_paths):
+        normalized_paths = []
+        for path in translation_paths:
+            normalized_path = path.replace("JSON.", "")  # Correctly remove "JSON." first
+            normalized_path = normalized_path.replace('.[].', '.{index}.').replace('[]', '{index}')
+            normalized_path = normalized_path.replace('{}', '{key}')
+            normalized_paths.append(normalized_path)
+        return normalized_paths
 
 
-        # Извлечение имен папок
-        for folder in adventure_data.get('folders', []):
-            folder_id = folder.get('_id', '')
-            folder_name = folder.get('name', '')
-            if folder_name:
-                data[f'folders_{folder_id}_name'] = self.extract_and_preserve(folder_name)
+    def match_path(self, current_path, normalized_paths):
+        for path in normalized_paths:
+            path_regex = re.escape(path)
+            path_regex = path_regex.replace(r'\.\{index\}', r'\[\d+\]')
+            path_regex = path_regex.replace(r'\{key\}', r'[^.]+')
+            path_regex = '^' + path_regex + '$'
+            if re.fullmatch(path_regex, current_path):
+                return True
+        return False
+
+    def generate_id_path(self, path, ids):
+        parts = path.strip('.').split('.')
+        result_path = []
+        for part in parts:
+            if '[' in part:  # Handling array indices
+                key = part.split('[')[0]
+                if key in ids:
+                    result_path.append(f"{key}_{ids[key]}")
+                else:
+                    result_path.append(part)  # Fallback to indexed path if no _id is available
+            elif '{}' in part:  # Handling wildcard keys
+                key = part.replace('{}', '')
+                if key in ids:
+                    result_path.append(f"{key}_{ids[key]}")
+                else:
+                    result_path.append(part)
+            else:
+                result_path.append(part)
+        return '.'.join(result_path)
 
 
-        return data
+    def reintegrate_translated_snippets(self, adventure_data, translated_snippets):
+        for flat_key, translated_value in translated_snippets.items():
+            parts = flat_key.split('.')
+            current_data = adventure_data
 
+            for i, part in enumerate(parts):
+                # Handling list indices in keys like 'journal[0]' or 'pages[0]'
+                if '[' in part and ']' in part:
+                    key, index = part[:-1].split('[')  # Split 'journal[0]' into 'journal' and '0'
+                    index = int(index)  # Convert index to integer
 
-    def update_item_info(self, item, actor_id, translated_snippets):
-        item_id = item.get('_id', 'No ID')
+                    # Ensure current_data[key] is a list and is long enough
+                    if key not in current_data:
+                        current_data[key] = []  # Initialize if not exists
+                    while len(current_data[key]) <= index:
+                        current_data[key].append({})  # Expand list if not long enough
 
-        item_name_key = f'actors_{actor_id}_items_{item_id}_name'
-        item['name'] = translated_snippets.get(item_name_key, item.get('name', ''))
+                    if i == len(parts) - 1:
+                        current_data[key][index] = translated_value  # Set value if it's the last part
+                    else:
+                        current_data = current_data[key][index]  # Navigate deeper otherwise
 
-        item_description_key = f'actors_{actor_id}_items_{item_id}_description'
-        if item_description_key in translated_snippets:
-            item_system_description = item.setdefault('system', {}).setdefault('description', {})
-            item_system_description['value'] = translated_snippets[item_description_key]
+                else:
+                    if i == len(parts) - 1:
+                        current_data[part] = translated_value  # Set value if it's the last part
+                    else:
+                        # Initialize a dictionary if not exists
+                        if part not in current_data:
+                            current_data[part] = {}
+                        current_data = current_data[part]  # Navigate deeper into the dictionary
 
-
-    def update_names_with_translations(self, items, base_key, translated_snippets): # Добавлен аргумент translated_snippets
-        for item in items:
-            item_id = item.get('_id', 'No ID')
-            name_key = f'{base_key}_{item_id}_name'
-            if name_key in translated_snippets: # Используем переданный аргумент
-                item['name'] = translated_snippets[name_key]
-            # Дополнительная обработка для страниц журналов, если они есть
-            if base_key == 'journal' and 'pages' in item:
-                for page in item['pages']:
-                    page_id = page.get('_id', 'No Page ID')
-                    text_content_key = f'{base_key}_{item_id}_pages_{page_id}_text'
-                    page_name_key = f'{base_key}_{item_id}_pages_{page_id}_name'
-                    if text_content_key in translated_snippets: # Используем переданный аргумент
-                        page['text']['content'] = translated_snippets[text_content_key]
-                    if page_name_key in translated_snippets: # Используем переданный аргумент
-                        page['name'] = translated_snippets[page_name_key]
 
     def run_translation_process(self):
         # Использование значения file_path из конфигурации, загруженной в self.file_path
         file_path = self.file_path
-        translated_snippets = self.extracty_snippets(file_path)
+        translated_snippets = self.extract_snippets(file_path)
         total_length, translation_cost = self.estimate_translation_cost(translated_snippets)
         print(f"Общее количество символов для перевода: {total_length}, перевод будет стоить примерно: ${format(translation_cost, '.2f')}")
 

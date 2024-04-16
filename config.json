@@ -1,10 +1,48 @@
 {
-    "api_key": "<введите ваш deepl api-key>",
-    "file_path": "originals/<имя json файла для перевода",
+    "api_key": "<your_api_key>",
+    "input_file_path": "<your_path_to_json>",
     "translations_cache_file": "work/translations_cache.json",
-    "csv_glossary_path" : "Glossary.csv",
-    "DeepL_glossary_name" : "<имя глоссария>", 
-    "glossary_id": "<ID глоссария, получаете после регистрации глоссария>",
-    "source_lang" : "en" ,
-    "target_lang" : "ru"  
-  }
+    "csv_glossary_path": "Glossary.csv",
+    "DeepL_glossary_name": "PF2e_2024_03",
+    "glossary_id": "073da13b-8633-4197-b299-fb139c9d8368",
+    "source_lang": "en",
+    "target_lang": "ru",
+	"Preset": "Pf2e",
+	"Pf2e_PathTranslated": [
+		"JSON.name",
+		"JSON.description",
+		"JSON.folders.[].name",
+		"JSON.actors.[].name",
+		"JSON.actors.[].system.details.disable",
+		"JSON.actors.[].system.details.description",
+		"JSON.actors.[].system.details.reset",
+		"JSON.actors.[].prototypeToken.name",
+		"JSON.actors.[].system.details.publicNotes",
+		"JSON.actors.[].system.details.privateNotes",
+		"JSON.actors.[].items.[].name",
+		"JSON.actors.[].items.[].system.description.value",
+		"JSON.actors.[].items.[].system.spell.system.description.value",
+		"JSON.actors.[].items.[].system.spell.name",
+		"JSON.journal.[].name",
+		"JSON.journal.[].pages.[].name",
+		"JSON.journal.[].pages.[].text.content",
+		"JSON.scene.[].name",
+		"JSON.scene.[].tokens.[].name",
+		"JSON.scene.[].notes.[].text",
+		"JSON.label",
+		"JSON.entries.{}.name",
+		"JSON.entries.{}.description",
+		"JSON.entries.{}.tokenName",
+		"JSON.entries.{}.hstealth",
+		"JSON.entries.{}.hdisable",
+		"JSON.entries.{}.hdescription",
+		"JSON.entries.{}.hreset",
+		"JSON.entries.{}.hroutine",
+		"JSON.entries.{}.items.[].name",
+		"JSON.entries.{}.items.[].description"
+		],	
+	"<preset name>_PathTranslated": [
+
+			]	
+
+}
